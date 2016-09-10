@@ -1,5 +1,6 @@
 class StoriesController < ApplicationController
 
+	impressionist :actions=>[:show]
 	before_action :get_story,only:[:show,:edit,:update,:destroy]
 
 	def index

@@ -19,6 +19,7 @@ gem 'acts_as_votable'
 gem 'aws-sdk', '~> 1.66.0'
 gem 'omniauth-oauth2', '~> 1.3.1'
 gem 'nprogress-rails'
+gem 'font-awesome-sass'
 gem 'jquery-turbolinks', '~> 2.1'
 gem 'sdoc', '~> 0.4.0', group: :doc
 

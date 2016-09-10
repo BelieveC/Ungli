@@ -1,2 +1,3 @@
 class AboutsController < ApplicationController
+
 end

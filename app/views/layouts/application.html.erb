@@ -3,12 +3,19 @@
 <head>
   <title>Trending | Ungli</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'style', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'jquery.nicescroll', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'scripts.js', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+  <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+   </script>
 </head>
-<body>
-
-<%= yield %>
-
+<body class="sticky-header left-side-collapsed">
+	<%= render "shared/leftsidebar" %>
+	<%= render "shared/navigation" %>
+		<%= yield %>
+	<%= render "shared/footer" %>
 </body>
 </html>

@@ -1248,6 +1248,7 @@ fieldset#body {
 }
 .profile_details {
     padding: 0 5em;
+    height: 4em;
 }
 a.top-sign {
     display: inline-block;

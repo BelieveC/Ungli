@@ -1,5 +1,6 @@
 <%= simple_form_for(@story,html:{multipart: true}) do |f|%>
 	<%= f.input :name %>
 	<%= f.input :description %>
-	<%= f.submit %>
+	<%= f.input :simage,class:"btn btn-primary"%>
+	<%= f.submit class:"btn btn-primary"%>
 <% end%>

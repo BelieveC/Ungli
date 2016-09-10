@@ -263,15 +263,15 @@ ul.dropdown-menu.drp-mnu li {
 }
 
 .custom-nav > li.menu-list.active > a {
-    background-image: url(../images/plus.png);
+    background-image: url("plus");
 }
 
 .custom-nav > li.nav-active.active > a {
-    background-image: url(../images/minus.png);
+    background-image: url("minus");
 }
 
 .custom-nav > li.nav-active.active > a:hover {
-    background-image: url(../images/minus.png);
+    background-image: url("minus");
 }
 
 .custom-nav li .fa {
@@ -352,7 +352,7 @@ ul.nav.nav-pills.nav-stacked.custom-nav li a img {
 i.camera {
     width:16px;
     height:16px;
-    background:url(../images/radio.png) no-repeat 0px 0px;
+    background:url("radio") no-repeat 0px 0px;
     display: inline-block;
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
@@ -361,7 +361,7 @@ i.camera {
     -ms-transition: 0.5s all;
 }
 ul.nav.nav-pills.nav-stacked.custom-nav li:hover i.camera {
-    background:url(../images/radio1.png) no-repeat 0px 0px;
+    background:url("radio") no-repeat 0px 0px;
 }
 @media (max-width:767px){
 	.hidden-xs{display:none!important}
@@ -719,7 +719,7 @@ ul.nav li a span {
 	cursor: pointer;
 }
 .sb-search-submit {
-   background: url('../images/search.png') no-repeat -23px 20px;
+   background: url("search") no-repeat -23px 20px;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /* IE 8 */
     color: transparent;
 	border: none;
@@ -728,7 +728,7 @@ ul.nav li a span {
 	-webkit-appearance: none;
 }
 .sb-icon-search {
-  background: #111 url('../images/search.png') no-repeat 23px 20px;
+  background: #111 url("search") no-repeat 23px 20px;
   z-index: 90;
      width:70px;
     height:65px;
@@ -738,7 +738,7 @@ ul.nav li a span {
 	width:75%;
 }
 .sb-search.sb-search-open .sb-icon-search,.no-js .sb-search .sb-icon-search {
-	background: url('../images/search.png') no-repeat 23px 20px;
+	background: url("search") no-repeat 23px 20px;
 	color: #fff;
 	z-index: 11;
 }
@@ -868,7 +868,7 @@ footer  p a:hover{
     text-decoration: none;
         height: 79px;
     width: 30px;
-    background: transparent url("../images/arrows.png") no-repeat left top;
+    background: transparent url("arrows") no-repeat left top;
     margin-top:3%;
 	display:none;
 }
@@ -1562,19 +1562,19 @@ i.fb{
 	width:379px;
 	height: 150px;
 	display: block;
-	background: url(../images/fb.png)#3b5997 no-repeat 145px 25px;
+	background: url("fb")#3b5997 no-repeat 145px 25px;
 }
 i.tw{
     width: 380px;
 	height: 150px;
 	display: block;
-	background: url(../images/tw.png)#3fccfd no-repeat 145px 25px;
+	background: url("tw")#3fccfd no-repeat 145px 25px;
 }
 i.pin{
     width: 380px;
 	height: 150px;
 	display: block;
-	background: url(../images/pin.png)#cb2027 no-repeat 145px 25px;
+	background: url("pin")#cb2027 no-repeat 145px 25px;
 }
 .jp-volume-controls button {
     display: block;
@@ -1595,7 +1595,7 @@ i.pin{
 	    box-shadow:none!important;
 }
 .jp-state-playing .jp-play {
-    background: url(../images/jplayer.blue.monday.png) 0 -42px no-repeat;
+    background: url("jplayer.blue.monday") 0 -42px no-repeat;
     box-shadow:none!important;
 }
 .jp-toggles button {
@@ -2297,21 +2297,21 @@ li.list-group-item1 {
     -moz-border-radius: 4px;
 }
 .sign-left ul li a.fb i{
-    background: url(../images/social.png) no-repeat -45px -1px;
+    background: url("social") no-repeat -45px -1px;
     width: 24px;
     height: 23px;
     display: inline-block;
     vertical-align: middle;
 }
 .sign-left ul li a.goog i{
-    background: url(../images/social.png) no-repeat -84px 0px;
+    background: url("social") no-repeat -84px 0px;
     width: 40px;
     height: 23px;
     display: inline-block;
    vertical-align: middle;
 }
 .sign-left ul li a.linkin i{
-    background: url(../images/social.png) no-repeat -3px 0px;
+    background: url("social") no-repeat -3px 0px;
     width: 32px;
     height: 23px;
     display: inline-block;
@@ -2836,16 +2836,16 @@ ul.side-icons li a:hover{
  opacity:0.4;
 }
 ul.side-icons li a.fb{
- background:url('../images/icons.png') no-repeat 0px 0px;
+ background:url("icons") no-repeat 0px 0px;
 }
 ul.side-icons li a.twitt{
- background:url('../images/icons.png') no-repeat -26px 0px;
+ background:url("icons.png") no-repeat -26px 0px;
 }
 ul.side-icons li a.goog{
- background:url('../images/icons.png') no-repeat -52px 0px;
+ background:url('icons') no-repeat -52px 0px;
 }
 ul.side-icons li a.drib{
- background:url('../images/icons.png') no-repeat -78px 0px;
+ background:url('icons') no-repeat -78px 0px;
 }
 /*-- //error--*/
 .error-top{

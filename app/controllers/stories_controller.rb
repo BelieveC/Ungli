@@ -27,6 +27,7 @@ class StoriesController < ApplicationController
 
 	def create
 		@story = Story.new(story_params)
+		@story.user_id = current_user.id
 		if @story.save
 			redirect_to @story,notice:"Successfully created your story"
 		else

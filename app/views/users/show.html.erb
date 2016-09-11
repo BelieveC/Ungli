@@ -16,16 +16,13 @@
 										</div>
 										<div class="jp-playlist">
 											<ul style="display: block;">
-												
-													<li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">
-													2. Mark-Ronson-Uptown <span class="jp-artist">by Pixar</span></a></div></li>
 
-													<li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">
-													3. Ellie-Goulding <span class="jp-artist">by Pixar</span></a></div></li><li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">
-													4. Maroon-Sugar <span class="jp-artist">by Pixar</span></a></div></li><li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">
-													5. Pharrell-Williams <span class="jp-artist">by Pixar</span></a></div></li><li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">
-													6. Ellie-Goulding <span class="jp-artist">by Pixar</span></a></div></li><li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">
-													7. Pharrell-Williams <span class="jp-artist">by Pixar</span></a></div></li></ul>
+												<% @user.stories.each do |story| %>
+													<li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a>
+													<%=link_to story.name,story,class:"jp-playlist-item" %>
+													</div></li>
+												<% 	end %>
+												</ul>
 										</div>
 									</div>
 								</div>

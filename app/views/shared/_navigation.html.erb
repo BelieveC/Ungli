@@ -20,7 +20,15 @@
 							<!-- //search-scripts -->
 									 <!---->
 									<div class="col-md-4 login-pop">
-										<div id="loginpop"><a href="#" id="loginButton" data-toggle="modal" data-target="#myModal5"><span>Login <i class="arrow glyphicon glyphicon-chevron-right"></i></span></a>
+										<% unless current_user %>
+											<div id="loginpop"><a href="#" id="loginButton" data-toggle="modal" data-target="#myModal5"><span>Login <i class="arrow glyphicon glyphicon-chevron-right"></i></span></a>
+										<% else %>
+											<div id="loginpop">
+											<%=link_to signout_path do %>
+												<span>Logout <i class="fa fa-sign-out"></i></span>
+											<% 	end %>
+										<% end %>
+
 												<div id="loginBox">                
 													<form action="#" method="post" id="loginForm">
 															<fieldset id="body">

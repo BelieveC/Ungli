@@ -6,6 +6,12 @@ Rails.application.routes.draw do
     match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
 	match 'auth/failure', to: redirect('/'), via: [:get, :post]
 	match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
+
 	resources :users
-    resources :stories
+    resources :stories do
+    	member do
+	       put "like"=>"stories#like"
+	       put "dislike"=>"stories#dislike"
+  	  	end
+  	  end
 end

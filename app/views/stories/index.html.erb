@@ -35,8 +35,14 @@
 											<i class="fa fa-user"></i>Anonymous
 									<% end %>
 									<a href="#"><i class="fa fa-eye"></i><%= story.impressionist_count%></a>
-									<a href="#"><i class="fa fa-thumbs-o-up"></i> 152</a>
-									<a href="#"><i class="fa fa-thumbs-o-down"></i>  26</a>
+									<%= link_to like_story_path(story),method: :put do %>
+										<i class="fa fa-thumbs-o-up"></i> <%=story.get_likes.size %>
+									<% end %>
+									<%= link_to dislike_story_path(story),method: :put do %>
+										<i class="fa fa-thumbs-o-down"></i><%=story.get_dislikes.size %>
+									<% end %>
+									
+									<a href="#"></a>
 								</div>
 									<div class="clearfix"></div>
 								<p><%=story.description %></p>

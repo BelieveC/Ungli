@@ -1,8 +1,8 @@
 class StoriesController < ApplicationController
 
 	impressionist :actions=>[:show]
-	before_action :get_story,only:[:show,:edit,:update,:destroy]
-	before_action :authenticate_user!,only:[:edit,:new,:create,:update,:destroy]
+	before_action :get_story,only:[:show,:edit,:update,:destroy,:like,:dislike]
+	before_action :authenticate_user!,only:[:edit,:new,:create,:update,:destroy,:like,:dislike]
 
 	def index
 		@stories = Story.all.order("created_at DESC")
@@ -51,6 +51,16 @@ class StoriesController < ApplicationController
 			@story.destroy
 			redirect_to root_path,notice:"Successfully removed your story"
 		end
+	end
+
+	def like
+		@story.liked_by current_user
+		redirect_to :back
+	end
+
+	def dislike
+		@story.disliked_by current_user
+		redirect_to :back
 	end
 
  	private

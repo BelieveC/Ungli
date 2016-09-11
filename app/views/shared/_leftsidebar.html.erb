@@ -27,12 +27,9 @@
 					<i class="lnr lnr-pencil"></i> <span>Typography</span>
 				<% end %>	
 				</li>
-				<li class="menu-list"><a href="#"><i class="lnr lnr-heart"></i>  <span>My Favourities</span></a> 
-					<ul class="sub-menu-list">
-						<li><a href="#">All Songs</a></li>
-					</ul>
-				</li>
-				<li class="menu-list"><a href="contact.html"><i class="fa fa-thumb-tack"></i><span>Contact</span></a>
+				<li class="menu-list"><%= link_to contact_path do %>
+						<i class="fa fa-thumb-tack"></i><span>Contact</span>
+					<% end %>
 					<ul class="sub-menu-list">
 						<li><a href="contact.html">Location</a> </li>
 					</ul>

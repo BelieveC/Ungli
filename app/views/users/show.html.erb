@@ -40,7 +40,9 @@
 				<div class="media-body response-text-right">
 					<p>Age: <%= @user.age %></p>
 					<p>Region: <%= @user.region %></p>
-					<p><%= link_to "Edit Profile",edit_user_path(@user),class:"btn btn-success"%></p>
+					<% if current_user.id == @user.id %>					
+						<p><%= link_to "Edit Profile",edit_user_path(@user),class:"btn btn-success"%></p>
+					<% end %>
 						<div class="clearfix"> </div>
 					</div>
 

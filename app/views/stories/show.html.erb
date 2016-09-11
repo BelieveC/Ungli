@@ -45,7 +45,7 @@
 					<ul>
 						<li><%= @story.created_at.strftime("%d %B %Y")%></li>
 					</ul>
-					<% if current_user.id == @story.user.id %> 
+					<% if current_user && current_user.id == @story.user.id %> 
 						<p><%=link_to "Edit Story",edit_story_path(@story),class:"btn btn-success" %></p>
 					<% end %>
 						<div class="clearfix"> </div>

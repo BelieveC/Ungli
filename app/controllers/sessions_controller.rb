@@ -8,6 +8,6 @@ class SessionsController < ApplicationController
 	def destroy
 	   @name = current_user.name
 	   session[:user_id] = nil
-	   redirect_to :back, notice:"#{@name} you are logged out. Thank you for Raising voice against corruption!"
+	   redirect_to root_path, notice:"#{@name} you are logged out. Thank you for Raising voice against corruption!"
 	end
 end

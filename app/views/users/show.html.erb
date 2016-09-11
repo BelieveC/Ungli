@@ -29,7 +29,7 @@
 														<%=link_to story.name,story,class:"jp-playlist-item" %>
 														</div></li>
 													<% end %>
-													<% if current_user.id == @user.id %>
+													<% if current_user && current_user.id == @user.id %>
 														<li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a>
 														<%=link_to story.name,story,class:"jp-playlist-item" %>
 														</div></li>	
@@ -50,7 +50,7 @@
 				<div class="media-body response-text-right">
 					<p>Age: <%= @user.age %></p>
 					<p>Region: <%= @user.region %></p>
-					<% if current_user.id == @user.id %>					
+					<% if current_user && current_user.id == @user.id %>					
 						<p><%= link_to "Edit Profile",edit_user_path(@user),class:"btn btn-success"%></p>
 					<% end %>
 						<div class="clearfix"> </div>

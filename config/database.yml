@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: Hackathon_production
-  username: Hackathon
-  password: <%= ENV['HACKATHON_DATABASE_PASSWORD'] %>
+  pool: 5
+  timeout: 5000

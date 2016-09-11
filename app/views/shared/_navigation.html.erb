@@ -6,7 +6,7 @@
 	<!--notification menu start -->
 		<div class="menu-right">
 			<div class="profile_details">		
-				  <div class="col-md-4 serch-part">
+				   <div class="col-md-4 serch-part">
 						<div id="sb-search" class="sb-search">
 							<form action="#" method="post">
 								<input class="sb-search-input" placeholder="Search" type="search" name="search" id="search">
@@ -15,9 +15,12 @@
 							</form>
 						</div>
 					</div>
-					  <!-- search-scripts -->
+			  <!-- search-scripts -->
 							<!-- //search-scripts -->
 									 <!---->
+									 <script>
+											new UISearch( document.getElementById( 'sb-search' ) );
+									</script>
 									<div class="col-md-4 login-pop">
 										<% unless current_user %>
 											<div id="loginpop"><a href="#" id="loginButton" data-toggle="modal" data-target="#myModal5"><span>Login <i class="arrow glyphicon glyphicon-chevron-right"></i></span></a>

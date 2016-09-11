@@ -42,9 +42,9 @@ Rails.application.configure do
     :storage => :s3,
     :s3_protocol => 'http',
     :s3_credentials => {
-      :bucket => "bitnotes",
-      :access_key_id =>"AKIAIT2FFKMXGD3AGIBA",
-      :secret_access_key => "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"
+      :bucket => "",
+      :access_key_id =>"",
+      :secret_access_key => ""
     }
   }
 end

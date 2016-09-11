@@ -15,7 +15,11 @@
 			<div class="music-left">
 			<% @stories.each do |story| %>
 				<div class="post-media">
-					<%= link_to (image_tag "33",class:"img-responsive"),story %>
+					<% if story.simage.url(:medium) != "/images/medium/missing.png" %>
+						<%= link_to (image_tag story.simage.url(:medium),class:"img-responsive"),story %>
+					<% else %>
+						<%= link_to (image_tag "33",class:"img-responsive"),story %>
+					<% end %>
 					  <div class="blog-text">
 					  		<%=link_to story do %>
 								<h3 class="h-t"><%= story.name %></h3>

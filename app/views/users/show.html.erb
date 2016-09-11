@@ -1,6 +1,12 @@
 <div id="page-wrapper">
 		<div class="inner-content single">
 				    <!--/music-right-->
+				 <% if flash.any?%>
+					<div class="alert alert-success alert-dismissible" role="alert">
+					   	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true	">&times;</span></button>
+					   	<h4><%= flash[:notice]%></h4>
+					</div>
+				<% end %>
 				<div class="tittle-head">
 							<h3 class="tittle"><%=@user.name %></h3>
 							<div class="clearfix"> </div>

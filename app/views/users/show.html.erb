@@ -18,7 +18,12 @@
 								<div id="jp_container_1" class="jp-video jp-video-270p" role="application" aria-label="media player">
 									<div class="jp-type-playlist">
 										<div id="jquery_jplayer_1" class="jp-jplayer" style="width: 480px; height: 270px;">
+										<% if @user.avatar.url(:medium) != "/images/medium/missing.png" %>
+											<%=image_tag @user.avatar.url(:medium),id:"jp_poster_0",style:"width: 480px; height: 270px; display: inline;" %>
+										<% else %>
 											<%=image_tag "play1",id:"jp_poster_0",style:"width: 480px; height: 270px; display: inline;" %>
+										<% end %>
+											
 										</div>
 										<div class="jp-playlist">
 											<ul style="display: block;">

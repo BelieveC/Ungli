@@ -29,10 +29,13 @@
 			<div class="media response-info">
 				<div class="media-body response-text-right">
 					<p><%= @story.description %></p>
+					<p>Submitted by <strong><%=link_to @story.user.name,@story.user%></strong></p>
 					<ul>
 						<li><%= @story.created_at.strftime("%d %B %Y")%></li>
 					</ul>
-					
+					<% if current_user.id == @story.user.id %> 
+						<p><%=link_to "Edit Story",edit_story_path(@story),class:"btn btn-success" %></p>
+					<% end %>
 						<div class="clearfix"> </div>
 					</div>
 				</div>

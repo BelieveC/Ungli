@@ -29,6 +29,8 @@
 			<div class="media response-info">
 				<div class="media-body response-text-right">
 					<p><%= @story.description %></p>
+					<p>Region: <%= @story.region %></p>
+					<p>Organisation Type: <%= @story.office %></p>
 					<% unless private? %>
 						<p>Submitted by <strong><%=link_to @story.user.name,@story.user%></strong></p>
 					<% else %>

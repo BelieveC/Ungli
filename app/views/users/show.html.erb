@@ -1,0 +1,53 @@
+<div id="page-wrapper">
+		<div class="inner-content single">
+				    <!--/music-right-->
+				<div class="tittle-head">
+							<h3 class="tittle"><%=@user.name %></h3>
+							<div class="clearfix"> </div>
+						</div>
+				   <div class="single_left">
+						<!--/video-main-->
+						 <div class="video-main">
+							<div class="video-record-list">
+								<div id="jp_container_1" class="jp-video jp-video-270p" role="application" aria-label="media player">
+									<div class="jp-type-playlist">
+										<div id="jquery_jplayer_1" class="jp-jplayer" style="width: 480px; height: 270px;">
+											<%=image_tag "play1",id:"jp_poster_0",style:"width: 480px; height: 270px; display: inline;" %>
+										</div>
+										<div class="jp-playlist">
+											<ul style="display: block;">
+													<li class="jp-playlist-current">
+													<div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a>
+													<a href="javascript:;" class="jp-playlist-item jp-playlist-current" tabindex="0">1. Ellie-Goulding <span class="jp-artist">by Pixar</span></a></div></li>
+													<li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">
+													2. Mark-Ronson-Uptown <span class="jp-artist">by Pixar</span></a></div></li><li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">
+													3. Ellie-Goulding <span class="jp-artist">by Pixar</span></a></div></li><li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">
+													4. Maroon-Sugar <span class="jp-artist">by Pixar</span></a></div></li><li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">
+													5. Pharrell-Williams <span class="jp-artist">by Pixar</span></a></div></li><li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">
+													6. Ellie-Goulding <span class="jp-artist">by Pixar</span></a></div></li><li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">
+													7. Pharrell-Williams <span class="jp-artist">by Pixar</span></a></div></li></ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- script for play-list -->
+		<link href="css/jplayer.blue.monday.min.css" rel="stylesheet" type="text/css">
+		</div>
+		<div class="response">
+			<h4>User Info</h4>
+			<div class="media response-info">
+				<div class="media-body response-text-right">
+					<p>Age: <%= @user.age %></p>
+					<p>Region: <%= @user.region %></p>
+					<p><%= link_to "Edit Profile",edit_user_path(@user),class:"btn btn-success"%></p>
+						<div class="clearfix"> </div>
+					</div>
+
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		<div class="clearfix"> </div>
+						<!--body wrapper end-->
+</div>

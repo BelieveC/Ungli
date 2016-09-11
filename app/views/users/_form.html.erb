@@ -1,0 +1,6 @@
+<%= simple_form_for(@user,html:{multipart: true}) do |f|%>
+	<%= f.input :name %>
+	<%= f.input :age %>
+	
+	<%= f.submit class:"btn btn-primary"%>
+<% end%>

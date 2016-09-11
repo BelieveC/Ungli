@@ -18,9 +18,16 @@
 											<ul style="display: block;">
 
 												<% @user.stories.each do |story| %>
-													<li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a>
-													<%=link_to story.name,story,class:"jp-playlist-item" %>
-													</div></li>
+													<% unless story.privacy_id ==1 %>
+														<li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a>
+														<%=link_to story.name,story,class:"jp-playlist-item" %>
+														</div></li>
+													<% end %>
+													<% if current_user.id == @user.id %>
+														<li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a>
+														<%=link_to story.name,story,class:"jp-playlist-item" %>
+														</div></li>	
+													<% end %>	
 												<% 	end %>
 												</ul>
 										</div>

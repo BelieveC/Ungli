@@ -2,5 +2,8 @@
 	<%= f.input :name %>
 	<%= f.input :description %>
 	<%= f.input :simage,class:"btn btn-primary"%>
+	<%= f.input :region, collection: ["Mumbai","Pune","Hyderabad","Delhi"] %>
+	<%= f.input :office, collection:["Local","Government","NGO","Other"] %>
+	<%= f.input :privacy_id,collection: [["Anonymous",1],["Public",0]],prompt: "Choose Privacy of Story"%>
 	<%= f.submit class:"btn btn-primary"%>
 <% end%>

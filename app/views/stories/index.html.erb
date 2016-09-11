@@ -23,7 +23,13 @@
 					      <div class="entry-meta">
 								<h6 class="blg"><i class="fa fa-clock-o"></i><%=time_ago_in_words(story.created_at) %> ago</h6>
 								<div class="icons">
-									<a href="#"><i class="fa fa-user"></i> Admin</a>
+									<% unless story.privacy_id == 1 %>
+										<%= link_to story.user do %>
+											<i class="fa fa-user"></i><%=story.user.name %>
+										<% end %>
+									<% else%>
+											<i class="fa fa-user"></i>Anonymous
+									<% end %>
 									<a href="#"><i class="fa fa-eye"></i><%= story.impressionist_count%></a>
 									<a href="#"><i class="fa fa-thumbs-o-up"></i> 152</a>
 									<a href="#"><i class="fa fa-thumbs-o-down"></i>  26</a>

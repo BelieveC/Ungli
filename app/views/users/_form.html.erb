@@ -1,6 +1,7 @@
 <%= simple_form_for(@user,html:{multipart: true}) do |f|%>
 	<%= f.input :name %>
 	<%= f.input :age %>
+	<%= f.input :region,collection: ["Mumbai","Pune","Hyderabad","Delhi"],prompt:"Choose Your Residence Region" %>
 	<%= f.input :avatar %>
 	<%= f.submit class:"btn btn-primary"%>
 <% end%>

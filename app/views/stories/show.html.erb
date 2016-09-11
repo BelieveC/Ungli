@@ -41,6 +41,16 @@
 					<p><%= @story.description %></p>
 					<p>Region: <%= @story.region %></p>
 					<p>Organisation Type: <%= @story.office %></p>
+					<p><a href="#"><i class="fa fa-eye"></i><%= @story.impressionist_count%></a>
+									&nbsp;
+									<%= link_to like_story_path(@story),method: :put do %>
+										<i class="fa fa-thumbs-o-up"></i> <%=@story.get_likes.size %>
+									<% end %>
+									&nbsp;
+									<%= link_to dislike_story_path(@story),method: :put do %>
+										<i class="fa fa-thumbs-o-down"></i><%=@story.get_dislikes.size %>
+									<% end %>
+					</p>
 					<% unless private? %>
 						<p>Submitted by <strong><%=link_to @story.user.name,@story.user%></strong></p>
 					<% else %>

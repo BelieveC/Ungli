@@ -18,7 +18,11 @@
 								<div id="jp_container_1" class="jp-video jp-video-270p" role="application" aria-label="media player">
 									<div class="jp-type-playlist">
 										<div id="jquery_jplayer_1" class="jp-jplayer" style="width: 480px; height: 270px;">
-											<%=image_tag "play1",id:"jp_poster_0",style:"width: 480px; height: 270px; display: inline;" %>
+											<% if @story.simage.url(:medium) != "/images/medium/missing.png" %>
+												<%= image_tag @story.simage.url(:medium),id:"jp_poster_0",style:"width: 480px; height: 270px; display: inline;" %>
+											<% else %>
+												<%=image_tag "play1",id:"jp_poster_0",style:"width: 480px; height: 270px; display: inline;" %>
+											<% end %>
 										</div>
 										<div class="jp-playlist">
 											<ul style="display: block;"><li class="jp-playlist-current"><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item jp-playlist-current" tabindex="0">1. Ellie-Goulding <span class="jp-artist">by Pixar</span></a></div></li><li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">2. Mark-Ronson-Uptown <span class="jp-artist">by Pixar</span></a></div></li><li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">3. Ellie-Goulding <span class="jp-artist">by Pixar</span></a></div></li><li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">4. Maroon-Sugar <span class="jp-artist">by Pixar</span></a></div></li><li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">5. Pharrell-Williams <span class="jp-artist">by Pixar</span></a></div></li><li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">6. Ellie-Goulding <span class="jp-artist">by Pixar</span></a></div></li><li><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">7. Pharrell-Williams <span class="jp-artist">by Pixar</span></a></div></li></ul>
